@@ -1,25 +1,25 @@
 # homeproj1
 
-## ADDING COLLABORATORS
-    1. Go to 'Settings'
-    2. Go to 'Manage Access'
+## Adding collaborators
+    1. Settings
+    2. Manage Access
     3. Invite a collaborator
     4. Search using username, full name, or email and select
     5. Add
 
-## OPENING VSCODE ON TERMINAL
-    1. code .
+## Opening vscode on terminal
+    'code .'
 
-## CREATING AND OPENING DIRECTORY
-    1. mkdir [directory_name]
-    2. cd [directory_name]
+## Creating and opening directory
+    1. 'mkdir [directory_name]'
+    2. 'cd [directory_name]'
 
-## CLONING AND OPENING REPO
-    1. git clone [repo_https_address]
-    2. cd [repo_name]
+## Cloning and opening repos
+    1. 'git clone [repo_https_address]'
+    2. 'cd [repo_name]'
 
-## ADDING, COMMITING, PUSHING TO REPO
+## Adding, commiting, and pushing
     1. Save changes to local 
-    2. git add .
-    3. git commit -m 'comment'
-    4. git push
+    2. 'git add .'
+    3. 'git commit -m 'comment''
+    4. 'git push'
