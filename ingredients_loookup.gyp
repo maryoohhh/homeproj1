@@ -1,7 +1,7 @@
 # Creating dictionary and printing the contents
 
-macaron_ingredients_lookup = {
-    "almond flour - cup": 1,
+macaron_ingredients_lookup = { # creating dictionary
+    "almond flour - cup": 1, # "key": value,
     "confectioners sugar - cup": 1.75,
     "salt - tsp": 1,
     "egg whites": 3,
@@ -17,3 +17,10 @@ filling_ingredients_lookup = {
     "heavy cream - tbsp": 3
 }
 
+print ("Macaron ingredients:") 
+for key, value in macaron_ingredients_lookup.items(): # iterating key and value
+    print(key, ':', value)
+
+print ("\nButtercream filling ingredients:") 
+for key, value in filling_ingredients_lookup.items():
+    print(key, ':', value)
