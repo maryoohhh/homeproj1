@@ -1,0 +1,125 @@
+=======================
+		GIT
+=======================
+GIT COMMANDS: 
+http://gitref.org/basic/
+http://stackoverflow.com/questions/927358/how-do-you-undo-the-last-commit
+show all aliases
+    git config --get-regexp alias
+stage
+    git add .
+treeviewer
+    git log --graph
+    gitk             
+checkout new branch
+    git checkout -b <branchname>    
+add modified files
+    git add <filename>              
+commit changes, add message
+    git commit -m '<message>'               
+commit all changes
+    git commit -a
+push new branch, add origin branch to remote                      
+    git push --set-upstream origin MAES-87   
+Unstage committed changes (~1 is a counter):
+    git reset HEAD~1
+    git reset origin/master --hard
+Uncommit committed changes (not pushed)
+    git reset --soft HEAD~1
+list all remote branches
+    git branch -r
+fetch and prune
+    git fetch --all --prune
+deleting local branch
+    git branch -d <branch_name>
+deleting remote branch
+    git push origin --delete <branch_name>
+reset a specific file 
+    git checkout HEAD -- src/app/my-file.txt
+    https://stackoverflow.com/questions/7147270/hard-reset-of-a-single-file
+undo git add
+    git reset
+rebase multiple commits:
+    git rebase --interactive HEAD~2         (rebase 2 commmits)
+
+    pick ca2231s
+    s casd221           // squash this one instead of the top one
+
+    :x  // to save and exit from vim
+rebasing feature branch on top of a hotfix master
+--current graph looks like
+*   6dceb3b (master) prod hotfix
+|   * 2b17402 (HEAD -> feature) Adding a feature!
+| /
+*   74da5ae
+*   91be81v
+*   dfd0752
+*   f4ffbff
+
+-- I want to move my feature on top of the master prod hotfix
+    git checkout feature
+    git rebase master
+
+-- now logs look like
+*   50efca3 (HEAD -> feature) Adding a feature!
+*   6dceb3b (master) prod hotfix
+*   74da5ae
+*   91be81v
+*   dfd0752
+*   f4ffbff
+
+
+-- never ever rebase master
+-- never ever rebase anything you have already pushed
+
+aborting rebase
+    git rebase --abort
+show all aliases
+    git config --get-regexp alias
+add alias
+    git config --global alias.cp cherry-pick
+    git config --global alias.ci commit
+    git config --global alias.co checkout
+    git config --global alias.st status
+    git config --global alias.feap "fetch --all --prune"
+    git config --global alias.visual "!gitk --all"
+remove alias
+    git config --global --unset alias.<alias_name>
+Resetting master head
+    git checkout master
+    git reset --hard e3f1e37
+    git push --force origin master
+    # Then to prove it (it will not print any diff)
+    git diff master..origin/master
+Merging dev to master
+    git checkout master
+    git status
+    git merge dev
+    git push -u origin master
+Same as gitk (by far the best way to look at your git logs)
+    git log --graph --oneline --all 
+
+Editing a commit and it's message (only works if you haven't pushed yet)
+    git add <filename>
+    git commit --ammend -m 'Altered the commit'
+Editing only the message (only works if you haven't pushed yet)
+    git commit --ammend -m 'Updated the message'
+
+Save uncommitted changes to use to a different branch
+    git stash save
+    git checkout other_branch
+    git stash pop
+
+
+Show what type of object (blob maybe?)
+    git cat-file -t <first 4 number sha>
+Show what's in the file
+    git cat-file -p <first 4 number sha>
+
+
+Syncing fork git repo:
+1. git remote add upstream https://github.com/whoever/whatever.git
+2. git fetch upstream
+3. git checkout master
+4. git merge --no-edit upstream/master
+5. git push
