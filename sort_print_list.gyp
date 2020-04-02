@@ -17,8 +17,7 @@ pizza_toppings = [
 print(pizza_toppings)
 
 def sort_list(lst):
-   lst = [(i.casefold()) for i in lst]
-   return sorted(lst)
+   return sorted(lst, key=str.lower)
 print(sort_list(pizza_toppings))
 #
 #def sort_reverse_list(lst):
