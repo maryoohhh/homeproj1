@@ -1,11 +1,14 @@
 # Building a user input
 
-listtype = input("Please select what type of list you would like (o for original, s for sorted, r for reverse): ")
+listtype = input("View original (o), sorted (s), reverse (r): ")
 
-def type(i):
+def lst(i):
     switcher = {
-        o: 'original'
-        s: 'sorted'
-        r: 'reverse'
+        o: 'original list',
+        s: 'sorted list',
+        r: 'reverse list'
     }
     return switcher.get(i, "Invalid choice")
+
+print("Here is the ", end="")
+print(lst, end=".")
