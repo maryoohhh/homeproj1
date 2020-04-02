@@ -10,13 +10,3 @@ elif listtype == 'r':
     print("Here is your reverse sorted list")
 else:
     print("Invalid choice")
-
-#def lst(i):
-#    switcher = {
-#        o: 'original list',
-#        s: 'sorted list',
-#        r: 'reverse list'
-#    }
-#    func = switcher.get(i, "Invalid choice")
-#    return func()
-#print(lst)
