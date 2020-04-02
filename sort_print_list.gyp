@@ -19,3 +19,7 @@ print(pizza_toppings)
 def sort_list():
     print(sorted(pizza_toppings))
 sort_list()
+
+def sort_reverse_list():
+    print(reversed(sorted(pizza_toppings)))
+sort_reverse_list()
