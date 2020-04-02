@@ -14,17 +14,20 @@ pizza_toppings = [
     'BBQ Meatlovers'
 ]
 
-print(pizza_toppings)
-
 def sort_list(lst):
    return sorted(lst, key=str.lower)
-print(sort_list(pizza_toppings))
 
 def sort_reverse_list(lst):
     return [ele for ele in reversed(sorted(lst, key=str.lower))]
-print(sort_reverse_list(pizza_toppings))
 
 def print_list(lst):
     for i in sorted(lst, key=str.lower):
         print (i)
+
+print(pizza_toppings)
+print("\n")
+print(sort_list(pizza_toppings))
+print("\n")
+print(sort_reverse_list(pizza_toppings))
+print("\n")
 print_list(pizza_toppings)
