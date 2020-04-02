@@ -14,3 +14,6 @@ pizza_toppings = [
     'BBQ Meatlovers'
 ]
 
+def sort_list():
+    print(sorted(pizza_toppings))
+sort_list()
