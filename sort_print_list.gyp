@@ -23,3 +23,7 @@ print(sort_list(pizza_toppings))
 def sort_reverse_list(lst):
     return [ele for ele in reversed(sorted(lst))]
 print(sort_reverse_list(pizza_toppings))
+
+def print_list(lst):
+    return lst
+print(pizza_toppings)
