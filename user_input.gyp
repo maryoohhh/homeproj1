@@ -10,5 +10,5 @@ def lst(i):
     }
     return switcher.get(i, "Invalid choice")
 
-print("Here is the ", end="")
-print(lst, end=".")
+#print("Here is the ", end="")
+print (lst())
