@@ -13,13 +13,13 @@ pizza_toppings = [
     'Mr Wedge',
     'BBQ Meatlovers'
 ]
-#
-#print(pizza_toppings)
-#
-#def sort_list():
-#    return sorted(pizza_toppings)
-#print(sort_list())
-#
-def sort_reverse_list():
-    return [ele for ele in reversed(sorted(pizza_toppings))]
-print(sort_reverse_list())
+
+print(pizza_toppings)
+
+def sort_list(lst):
+   return sorted(lst)
+print(sort_list(pizza_toppings))
+
+def sort_reverse_list(lst):
+    return [ele for ele in reversed(sorted(lst))]
+print(sort_reverse_list(pizza_toppings))
