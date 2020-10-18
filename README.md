@@ -8,14 +8,19 @@
     5. Add
 
 ## Opening vscode on terminal
+
     `code .`
 
 ## Creating and opening directory
+
     1. `mkdir [directory_name]`
+    
     2. `cd [directory_name]`
 
 ## Cloning and opening repos
+
     1. `git clone [repo_address]`
+    
     2. `cd [repo_name]`
 
 ## Adding branch
@@ -33,13 +38,19 @@
 **Pull** - used to fetch and download content from a remote repository and immediately update local repository to match that content
 
     1. `git fetch --prune --all`
+    
     2. `git pull`
 
 ## Adding, commiting, and pushing
+
 **Best practice:** always do a git fetch and git pull prior to adding, commiting and pushing.
+
     1. Save changes to local 
+    
     2. `git add .`
+    
     3. `git commit -m 'message'`
+    
     4. `git push origin [branch_name]`
 
 ## Creating a Pull Request
